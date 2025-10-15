@@ -11,16 +11,18 @@ function ProjectCards(props) {
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
         <Card.Text style={{ textAlign: "justify" }}>
-          {props.description}
+          <ul style={{ paddingLeft: "1rem", margin: 0, listStyle: "none" }}>
+            {props.description.split("\n").map((line, index) => (
+              <li key={index} style={{ marginBottom: "0.5rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                {line}
+              </li>
+            ))}
+          </ul>
         </Card.Text>
-        <Button variant="primary" href={props.ghLink} target="_blank">
-          <BsGithub /> &nbsp;
-          {props.isBlog ? "Blog" : "GitHub"}
-        </Button>
-        {"\n"}
-        {"\n"}
 
-        {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
+        <Button variant="primary" href={props.ghLink} target="_blank">
+          <BsGithub /> &nbsp;{props.isBlog ? "Blog" : "GitHub"}
+        </Button>
 
         {!props.isBlog && props.demoLink && (
           <Button
@@ -29,12 +31,12 @@ function ProjectCards(props) {
             target="_blank"
             style={{ marginLeft: "10px" }}
           >
-            <CgWebsite /> &nbsp;
-            {"Demo"}
+            <CgWebsite /> &nbsp;Demo
           </Button>
         )}
       </Card.Body>
     </Card>
   );
 }
+
 export default ProjectCards;

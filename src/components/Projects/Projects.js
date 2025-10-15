@@ -5,6 +5,7 @@ import Particle from "../Particle";
 import emotion from "../../Assets/Projects/emotion.png";
 import stock from "../../Assets/Projects/stock.png";
 import crypto from "../../Assets/Projects/crypto.png";
+import Quick from "../../Assets/Projects/quickchat.png";
 
 function Projects() {
   return (
@@ -12,18 +13,23 @@ function Projects() {
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          My Recent <strong className="purple">Works</strong>
         </h1>
         <p style={{ color: "white" }}>
           Here are a few projects I've worked on recently.
         </p>
+
+        {/* First Row */}
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={stock}
               isBlog={false}
               title="Stock Archery Website"
-              description="Developed a dynamic, responsive website for Stock Archery, a financial education platform, using React.js, Firebase, and Tailwind CSS. The single-page application features a modern, user-friendly interface with secure user authentication, real-time course data, and mobile-optimized design. By leveraging React’s component-based architecture, Firebase’s backend capabilities, and Tailwind’s utility-first styling, I delivered a scalable, high-performance platform that effectively promotes Stock Archery’s stock market and crypto training services."
+              description={`- Developed a dynamic, responsive website for Stock Archery, a financial education platform.
+- Built using React.js, Firebase, and Tailwind CSS with a modern, user-friendly interface.
+- Implemented secure user authentication and real-time course data.
+- Optimized for mobile devices and scalable for future expansion.`}
               ghLink="https://github.com/StockApi-cloud/Website"
               demoLink="https://stockarchery.in"
             />
@@ -33,23 +39,45 @@ function Projects() {
             <ProjectCard
               imgPath={crypto}
               isBlog={false}
-              title="Crypto-Tracker"
-              description="Built a Crypto Tracker, a dynamic web application for real-time cryptocurrency price tracking, using React.js, Firebase, Tailwind CSS, and Express.js. The platform delivers a seamless user experience with live market data, user authentication, and a responsive, modern interface. React.js enabled a modular, component-driven frontend, while Express.js powered a robust API to fetch and process crypto data. Firebase handled secure user authentication and data storage, and Tailwind CSS ensured a sleek, mobile-friendly design. This project showcases my ability to integrate frontend and backend technologies to create a high-performance, user-focused application."
+              title="Crypto Tracker"
+              description={`- Real-time cryptocurrency tracking web app with live market data.
+- Built using React.js, Firebase, Tailwind CSS, and Express.js.
+- Supports secure user authentication and data storage.
+- Responsive, modern interface for seamless experience across devices.
+- Demonstrates integration of frontend and backend for high-performance applications.`}
               ghLink="https://github.com/Nirupamkumar-frontenddeveloper/crypto-tracker"
               demoLink="https://crypto-tracker-ten-pi.vercel.app/"
             />
           </Col>
 
-          
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={emotion}
               isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
+              title="Face Recognition & Emotion Detection"
+              description={`- Developed a CNN classifier using the FER-2013 dataset with Keras and TensorFlow.
+- Achieved 60.1% accuracy in predicting human emotions.
+- Used OpenCV for face detection and fed detected faces to the classifier.
+- Delivered a functional pipeline for real-time emotion recognition.`}
               ghLink="https://github.com/Nirupamkumar-frontenddeveloper/Face_And_Emotion_Detection-master"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+            />
+          </Col>
+        </Row>
+
+        {/* Second Row */}
+        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={Quick}
+              isBlog={false}
+              title="Quick Chat"
+              description={`- Real-time chat application for instant messaging
+- Built with React.js, Node.js, Express, and Socket.IO
+- Secure user authentication with online/offline status
+- Instant message delivery with smooth, lag-free communication
+- Fully responsive and user-friendly interface
+- Real-time WebSocket communication for efficient data transfer`}
+              ghLink="https://github.com/Nirupamkumar-frontenddeveloper/chatquick"
             />
           </Col>
         </Row>

@@ -22,9 +22,9 @@ function Home2() {
   I fell in love with programming and have been building real-world applications ever since. 🤷‍♂️
   <br />
   <br />
-  I am fluent in languages like
+  I am fluent in frameworks like
   <i>
-    <b className="purple"> C++, JavaScript, and Go. </b>
+    <b className="purple">React Js, Vue Js, Tailwind CSS </b>
   </i>
   <br />
   <br />
